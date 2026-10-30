@@ -1,4 +1,5 @@
 import hashlib
+from contextlib import closing
 import json
 import os
 import pathlib
@@ -136,7 +137,7 @@ def configure_orca(home, state_dir):
     path = orca_database(home)
     if not path.exists():
         raise RuntimeError('Start Orca once to initialize a profile, close it, then resume configuration.')
-    with sqlite3.connect('file:' + str(path) + '?mode=rw', uri=True) as db:
+    with closing(sqlite3.connect('file:' + str(path) + '?mode=rw', uri=True)) as db, db:
         columns = [r[1] for r in db.execute('PRAGMA table_info(profile_state_documents)')]
         if columns != ['domain', 'payload', 'domain_version', 'revision', 'updated_at', 'content_hash']:
             raise RuntimeError('Unsupported Orca profile schema; settings left unchanged.')
@@ -145,7 +146,7 @@ def configure_orca(home, state_dir):
             raise RuntimeError('Orca settings schema or checksum could not be verified.')
         backup = state_dir / 'orca-backups' / (str(time.time_ns()) + '.db')
         backup.parent.mkdir(parents=True, exist_ok=True, mode=0o700)
-        with sqlite3.connect(backup) as dest:
+        with closing(sqlite3.connect(backup)) as dest, dest:
             db.backup(dest)
         backup.chmod(0o600)
         db.execute('BEGIN IMMEDIATE')

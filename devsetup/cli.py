@@ -1,4 +1,5 @@
 import argparse
+from contextlib import closing
 import json
 import os
 import pathlib
@@ -229,7 +230,7 @@ def capture(home, destination):
     db = config.orca_database(home)
     if db.exists():
         import sqlite3
-        with sqlite3.connect('file:' + str(db) + '?mode=ro', uri=True) as connection:
+        with closing(sqlite3.connect('file:' + str(db) + '?mode=ro', uri=True)) as connection:
             row = connection.execute("SELECT payload FROM profile_state_documents WHERE domain='settings'").fetchone()
         from .state import atomic_json
         atomic_json(destination / 'orca-settings.json', config.portable_orca(json.loads(row[0])))
