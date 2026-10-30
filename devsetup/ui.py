@@ -15,8 +15,9 @@ def key_decision(key):
 def ask(message):
     if not sys.stdin.isatty():
         raise RuntimeError('Interactive input required; use --yes with an explicit selection.')
-    print(f'{message} [Enter] Yes · [Delete/Backspace] Skip', flush=True)
+    prompt = f'{message} [Enter] Yes · [Delete/Backspace] Skip'
     if os.name == 'nt':
+        print(prompt, flush=True)
         import msvcrt
         while True:
             key = msvcrt.getwch()
@@ -32,6 +33,7 @@ def ask(message):
     previous = termios.tcgetattr(fd)
     try:
         tty.setraw(fd)
+        print(prompt, end='\r\n', flush=True)
         while True:
             key = os.read(fd, 1).decode()
             if key == '\x1b':
