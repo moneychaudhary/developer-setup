@@ -1,0 +1,177 @@
+{
+  "nestWorkspaces": true,
+  "refreshLocalBaseRefOnWorktreeCreate": false,
+  "autoRenameBranchFromWork": true,
+  "branchPrefix": "git-username",
+  "branchPrefixCustom": "",
+  "theme": "system",
+  "uiLanguage": "system",
+  "appIcon": "classic",
+  "appFontFamily": "Geist",
+  "editorAutoSave": true,
+  "editorAutoSaveDelayMs": 1000,
+  "editorMinimapEnabled": false,
+  "editorFontFamily": "",
+  "editorWordWrap": true,
+  "richMarkdownSpellcheckEnabled": true,
+  "markdownReviewToolsEnabled": true,
+  "terminalFontSize": 14,
+  "terminalFontFamily": "SF Mono",
+  "terminalFontWeight": 500,
+  "terminalFontWeightBold": 700,
+  "terminalLineHeight": 1,
+  "terminalScrollSensitivity": 1.15,
+  "terminalFastScrollSensitivity": 5,
+  "terminalTuiScrollSensitivity": 1,
+  "terminalGpuAcceleration": "auto",
+  "terminalLigatures": "auto",
+  "terminalInlineImages": true,
+  "terminalCursorStyle": "block",
+  "terminalCursorBlink": true,
+  "terminalThemeDark": "Ghostty Default Style Dark",
+  "terminalThemeLight": "Builtin Tango Light",
+  "terminalUseSeparateLightTheme": true,
+  "terminalInactivePaneOpacity": 0.9,
+  "terminalActivePaneOpacity": 1,
+  "terminalDividerThicknessPx": 3,
+  "terminalRightClickToPaste": false,
+  "terminalMouseHideWhileTyping": false,
+  "terminalFocusFollowsMouse": false,
+  "windowBackgroundBlur": false,
+  "minimizeToTrayOnClose": false,
+  "showMenuBarIcon": true,
+  "terminalClipboardOnSelect": false,
+  "terminalCopyTrimsGutter": true,
+  "terminalAllowOsc52Clipboard": true,
+  "claudeAgentTeamsMode": "off",
+  "terminalScrollbackRows": 5000,
+  "openLinksInApp": false,
+  "experimentalNativeChat": true,
+  "nativeChatResumeWorkOnRestart": true,
+  "nativeChatQueueFollowUps": true,
+  "nativeChatInlineVisuals": true,
+  "nativeChatInheritShellEnvironment": true,
+  "nativeChatPermissionMode": "auto",
+  "rightSidebarOpenByDefault": true,
+  "showGitIgnoredFiles": true,
+  "followSymlinkedDirectories": false,
+  "sourceControlViewMode": "list",
+  "sourceControlCompareAgainstUpstream": false,
+  "showTitlebarAppName": true,
+  "showTasksButton": true,
+  "showAutomationsButton": true,
+  "artifactsEnabled": true,
+  "nestedWorkerMaxDepth": 10,
+  "orchestrationChatErrorEscalationEnabled": true,
+  "orchestrationHeartbeatsEnabled": true,
+  "orchestrationHeartbeatIntervalMinutes": 5,
+  "showSkillsButton": false,
+  "ctrlTabOrderMode": "mru",
+  "terminalShortcutPolicy": "orca-first",
+  "diffDefaultView": "inline",
+  "diffWordWrap": false,
+  "diffShowWhitespace": false,
+  "diffCollapseUnchangedRegions": false,
+  "defaultTuiAgent": "claude",
+  "pluginSystemEnabled": false,
+  "disabledPlugins": [],
+  "agentPermissionDefault": "auto",
+  "agentPermissionOverrides": {
+    "codebuddy": "full-access",
+    "openclaude": "full-access",
+    "autohand": "full-access",
+    "ante": "full-access",
+    "trae": "full-access",
+    "opencode": "full-access",
+    "opencode2": "full-access",
+    "omp": "full-access",
+    "qoder": "full-access",
+    "qoder-cn": "full-access",
+    "gemini": "full-access",
+    "antigravity": "full-access",
+    "aider": "full-access",
+    "goose": "full-access",
+    "amp": "full-access",
+    "kiro": "full-access",
+    "crush": "full-access",
+    "cline": "full-access",
+    "command-code": "full-access",
+    "continue": "full-access",
+    "cursor": "full-access",
+    "droid": "full-access",
+    "kimi": "full-access",
+    "mistral-vibe": "full-access",
+    "qwen-code": "full-access",
+    "rovo": "full-access",
+    "hermes": "full-access",
+    "copilot": "full-access",
+    "grok": "full-access",
+    "muse": "full-access",
+    "zcode": "full-access",
+    "devin": "full-access"
+  },
+  "agentStatusHooksEnabled": true,
+  "claudeSubagentNavigationEnabled": true,
+  "agentWorkspaceTrustEnabled": true,
+  "tabAutoGenerateTitle": false,
+  "confirmClosePinnedTab": true,
+  "editorPreviewTabsEnabled": true,
+  "keepComputerAwakeWhileAgentsRun": false,
+  "terminalMacOptionAsAlt": "auto",
+  "compactWorktreeCards": false,
+  "nativeChatAppearance": {
+    "matchTerminalInterface": true
+  },
+  "nativeChatProviders": {
+    "claude": true,
+    "antigravity": false,
+    "opencode": true,
+    "codex": true
+  },
+  "sourceControlAi": {
+    "enabled": true,
+    "instructionsByOperation": {
+      "commitMessage": "",
+      "pullRequest": "",
+      "branchName": ""
+    },
+    "prCreationDefaults": {
+      "draft": false,
+      "useTemplate": false,
+      "generateDetailsOnOpen": false,
+      "openAfterCreate": false
+    },
+    "actions": {
+      "commitMessage": {
+        "commandInputTemplate": "Write a git commit message for the staged changes on {branch}.\n\nStaged files:\n{stagedFiles}\n\nStaged diff:\n{stagedPatch}\n\nFormat: conventional commits, `<type>(<scope>): <subject>`, imperative, subject max 50 chars, no trailing period. Add a body wrapped at 72 chars only if the change needs a \"why\". Add a `BREAKING CHANGE:` footer if applicable.\nIf a GitHub issue number is linked, add a footer \"Refs #<number>\" using this value, and add nothing if it is empty: {linkedIssue}\nDescribe only what's in the diff. No emoji, no AI attribution, no Co-authored-by.\nOutput ONLY the commit message.",
+        "agentArgs": ""
+      },
+      "pullRequest": {
+        "commandInputTemplate": "{basePrompt}\n\nStyle rules (apply on top of the above):\n- Title: imperative, max 72 chars, no emoji or trailing period.\n- Body sections: ## Summary (1\u20133 sentences), ## Changes (bullets by area), ## Testing (only what's verifiable; otherwise \"Not tested\"), ## Notes (only migrations, config, breaking changes, or risks; omit if none).\n- If this value is a GitHub issue number, end the body with \"Closes #<number>\"; if it is empty, add nothing: {linkedIssue}\n- If a title or description was already typed, keep its intent: {currentTitle} / {currentBody}\n- Describe only what's in the diff. No filler, no AI attribution.",
+        "agentArgs": ""
+      },
+      "branchName": {
+        "commandInputTemplate": "{basePrompt}\n\nNaming rules (override any conflicting style above):\n- Format: <type>/<short-slug>, type is one of feat, fix, chore, refactor, docs, test, perf\n- Lowercase kebab-case, 3\u20136 words, max 50 chars, only a-z 0-9 - /\n- If the task mentions an issue or ticket number, put it first in the slug, e.g. fix/1234-token-refresh\n- Describe the change, not the process\n\nTask: {firstPrompt}",
+        "agentArgs": ""
+      },
+      "conversationName": {
+        "commandInputTemplate": "{basePrompt}"
+      },
+      "fixCommitFailure": {
+        "commandInputTemplate": "{basePrompt}\n\nRules:\n- Never use --no-verify, and don't edit or disable hooks, git config, identity, or signing.\n- Only re-stage files that were already staged or changed by the fix. Never `git add -A`.\n- Don't commit until I approve.\n\nFirst state the cause and your proposed fix (file:line, or a corrected message for commit-msg hooks). Don't touch flagged secrets without asking. Wait for my OK.\nAfter I approve, apply the fix, re-run the hook's commands, and show `git diff --cached --stat` plus the commit command. Don't run it."
+      },
+      "fixPushFailure": {
+        "commandInputTemplate": "{basePrompt}\n\nRules:\n- Never use --no-verify, --force, or --force-with-lease unless I explicitly approve it.\n- Don't edit or disable hooks, and don't change git config, credentials, or remotes.\n- Don't retry the push until I approve.\n\nFirst state the cause (hook, non-fast-forward, permissions, auth, server rejection) and your proposed fix. For auth or permission problems, tell me what to do instead of working around them. Wait for my OK.\nAfter I approve, apply the fix, re-run the hook's commands locally, and show me the push command. Don't run it."
+      },
+      "fixChecks": {
+        "commandInputTemplate": "{basePrompt}\n\nRules:\n- Read-only on GitHub/GitLab: no comments, no CI re-runs, no pushing, no commits unless I ask.\n- Don't skip, disable, or loosen tests, lint rules, or type checks to make a check pass.\n\nFirst give, per failing check: the root cause in one line and the proposed fix with file:line. Call out flaky or unrelated failures instead of changing code for them. Wait for my OK.\nAfter I approve, apply the fix and run the same checks locally."
+      },
+      "resolveConflicts": {
+        "commandInputTemplate": "{basePrompt}\n\nRules:\n- Do NOT push, force-push, or post anything on GitHub/GitLab.\n- Do NOT run `git rebase --continue`, `git merge --continue`, or `git commit` until I approve.\n- Never take \"ours\" or \"theirs\" for a whole file blindly.\n\nFirst list each conflict: file:line, what each side changed, and your proposed resolution. Flag logic, schema/migration, lockfile, and config conflicts. Wait for my OK.\nAfter I approve, apply the resolutions, regenerate lockfiles instead of hand-merging them, run build/tests, and show me the command to finish. Don't run it."
+      },
+      "resolveComments": {
+        "commandInputTemplate": "{basePrompt}\n\n/grill-me\n\nRules:\n- Do NOT reply to, resolve, react to, or post anything on GitHub/GitLab.\n- Do NOT commit or push unless I ask.\n\nBefore editing, list each comment with file:line, what the reviewer wants, and your planned change (or why you'd push back). Then wait for my OK.\nAfter I approve, make the changes, run relevant tests/lint, and end with a short reply per comment that I can paste myself."
+      }
+    }
+  }
+}

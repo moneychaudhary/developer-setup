@@ -1,0 +1,23 @@
+{
+  "window.autoDetectColorScheme": true,
+  "window.zoomLevel": 1,
+  "editor.fontFamily": "'SF Mono', Menlo, Monaco, monospace",
+  "editor.fontSize": 12,
+  "editor.suggestFontSize": 16,
+  "editor.inlayHints.fontSize": 16,
+  "terminal.integrated.fontSize": 16,
+  "debug.console.fontSize": 16,
+  "markdown.preview.fontSize": 16,
+  "chat.editor.fontSize": 16,
+  "scm.inputFontSize": 16,
+  "notebook.output.fontSize": 16,
+  "custom-ui-style.webview.enable": false,
+  "custom-ui-style.extensions.enable": false,
+  "custom-ui-style.stylesheet": {
+    ".monaco-workbench .part.sidebar, .monaco-workbench .part.sidebar .monaco-list-row, .monaco-workbench .part.sidebar .title-label": {
+      "font-size": "18px !important"
+    }
+  },
+  "files.autoSave": "afterDelay",
+  "terminal.integrated.fontFamily": "'SF Mono', Menlo, Monaco, monospace"
+}

@@ -1,0 +1,542 @@
+[
+  {
+    "id": "homebrew",
+    "label": "Homebrew",
+    "provider": "homebrew",
+    "package": "",
+    "probe": [
+      "brew",
+      "--version"
+    ]
+  },
+  {
+    "id": "mise",
+    "label": "Mise",
+    "provider": "formula",
+    "package": "mise",
+    "probe": [
+      "mise",
+      "--version"
+    ],
+    "requires": [
+      "homebrew"
+    ]
+  },
+  {
+    "id": "git",
+    "label": "Git",
+    "provider": "formula",
+    "package": "git",
+    "probe": [
+      "git",
+      "--version"
+    ],
+    "requires": [
+      "homebrew"
+    ]
+  },
+  {
+    "id": "github",
+    "label": "Github",
+    "provider": "formula",
+    "package": "gh",
+    "probe": [
+      "gh",
+      "--version"
+    ],
+    "requires": [
+      "homebrew"
+    ]
+  },
+  {
+    "id": "aws",
+    "label": "Aws",
+    "provider": "formula",
+    "package": "awscli",
+    "probe": [
+      "aws",
+      "--version"
+    ],
+    "requires": [
+      "homebrew"
+    ]
+  },
+  {
+    "id": "azure",
+    "label": "Azure",
+    "provider": "formula",
+    "package": "azure-cli",
+    "probe": [
+      "az",
+      "--version"
+    ],
+    "requires": [
+      "homebrew"
+    ]
+  },
+  {
+    "id": "psql",
+    "label": "Psql",
+    "provider": "formula",
+    "package": "libpq",
+    "probe": [
+      "psql",
+      "--version"
+    ],
+    "requires": [
+      "homebrew"
+    ]
+  },
+  {
+    "id": "ripgrep",
+    "label": "Ripgrep",
+    "provider": "formula",
+    "package": "ripgrep",
+    "probe": [
+      "rg",
+      "--version"
+    ],
+    "requires": [
+      "homebrew"
+    ]
+  },
+  {
+    "id": "jq",
+    "label": "Jq",
+    "provider": "formula",
+    "package": "jq",
+    "probe": [
+      "jq",
+      "--version"
+    ],
+    "requires": [
+      "homebrew"
+    ]
+  },
+  {
+    "id": "yq",
+    "label": "Yq",
+    "provider": "formula",
+    "package": "yq",
+    "probe": [
+      "yq",
+      "--version"
+    ],
+    "requires": [
+      "homebrew"
+    ]
+  },
+  {
+    "id": "shellcheck",
+    "label": "Shellcheck",
+    "provider": "formula",
+    "package": "shellcheck",
+    "probe": [
+      "shellcheck",
+      "--version"
+    ],
+    "requires": [
+      "homebrew"
+    ]
+  },
+  {
+    "id": "shfmt",
+    "label": "Shfmt",
+    "provider": "formula",
+    "package": "shfmt",
+    "probe": [
+      "shfmt",
+      "--version"
+    ],
+    "requires": [
+      "homebrew"
+    ]
+  },
+  {
+    "id": "pre_commit",
+    "label": "Pre Commit",
+    "provider": "formula",
+    "package": "pre-commit",
+    "probe": [
+      "pre-commit",
+      "--version"
+    ],
+    "requires": [
+      "homebrew"
+    ]
+  },
+  {
+    "id": "gitleaks",
+    "label": "Gitleaks",
+    "provider": "formula",
+    "package": "gitleaks",
+    "probe": [
+      "gitleaks",
+      "--version"
+    ],
+    "requires": [
+      "homebrew"
+    ]
+  },
+  {
+    "id": "localstack",
+    "label": "Localstack",
+    "provider": "formula",
+    "package": "localstack/tap/lstk",
+    "probe": [
+      "lstk",
+      "--version"
+    ],
+    "requires": [
+      "homebrew"
+    ]
+  },
+  {
+    "id": "node",
+    "label": "node",
+    "provider": "mise",
+    "package": "node",
+    "probe": [
+      "node",
+      "--version"
+    ],
+    "requires": [
+      "homebrew",
+      "mise"
+    ]
+  },
+  {
+    "id": "python",
+    "label": "python",
+    "provider": "mise",
+    "package": "python",
+    "probe": [
+      "python",
+      "--version"
+    ],
+    "requires": [
+      "homebrew",
+      "mise"
+    ]
+  },
+  {
+    "id": "pnpm",
+    "label": "pnpm",
+    "provider": "mise",
+    "package": "pnpm",
+    "probe": [
+      "pnpm",
+      "--version"
+    ],
+    "requires": [
+      "homebrew",
+      "mise"
+    ]
+  },
+  {
+    "id": "uv",
+    "label": "uv",
+    "provider": "mise",
+    "package": "uv",
+    "probe": [
+      "uv",
+      "--version"
+    ],
+    "requires": [
+      "homebrew",
+      "mise"
+    ]
+  },
+  {
+    "id": "terraform",
+    "label": "terraform",
+    "provider": "mise",
+    "package": "terraform",
+    "probe": [
+      "terraform",
+      "--version"
+    ],
+    "requires": [
+      "homebrew",
+      "mise"
+    ]
+  },
+  {
+    "id": "claude_code",
+    "label": "Claude Code",
+    "provider": "cask",
+    "package": "claude-code",
+    "probe": [
+      "claude",
+      "--version"
+    ],
+    "app": "Claude Code.app",
+    "requires": [
+      "homebrew"
+    ]
+  },
+  {
+    "id": "codex_cli",
+    "label": "Codex CLI",
+    "provider": "cask",
+    "package": "codex",
+    "probe": [
+      "codex",
+      "--version"
+    ],
+    "app": null,
+    "requires": [
+      "homebrew"
+    ]
+  },
+  {
+    "id": "vscode",
+    "label": "Visual Studio Code",
+    "provider": "cask",
+    "package": "visual-studio-code",
+    "probe": [
+      "code",
+      "--version"
+    ],
+    "app": "Visual Studio Code.app",
+    "requires": [
+      "homebrew"
+    ]
+  },
+  {
+    "id": "orca",
+    "label": "Orca",
+    "provider": "cask",
+    "package": "stablyai/orca/orca",
+    "probe": [
+      "orca",
+      "--version"
+    ],
+    "app": "Orca.app",
+    "requires": [
+      "homebrew"
+    ]
+  },
+  {
+    "id": "docker",
+    "label": "Docker Desktop",
+    "provider": "cask",
+    "package": "docker-desktop",
+    "probe": [
+      "docker",
+      "--version"
+    ],
+    "app": "Docker.app",
+    "requires": [
+      "homebrew"
+    ]
+  },
+  {
+    "id": "postico2",
+    "label": "Postico 2",
+    "provider": "cask",
+    "package": "postico",
+    "probe": [],
+    "app": "Postico 2.app",
+    "requires": [
+      "homebrew"
+    ]
+  },
+  {
+    "id": "bruno",
+    "label": "Bruno",
+    "provider": "cask",
+    "package": "bruno",
+    "probe": [
+      "bru",
+      "--version"
+    ],
+    "app": "Bruno.app",
+    "requires": [
+      "homebrew"
+    ]
+  },
+  {
+    "id": "session_manager",
+    "label": "AWS Session Manager plugin",
+    "provider": "cask",
+    "package": "session-manager-plugin",
+    "probe": [
+      "session-manager-plugin",
+      "--version"
+    ],
+    "app": null,
+    "requires": [
+      "homebrew"
+    ]
+  },
+  {
+    "id": "cursor_cli",
+    "label": "Cursor CLI",
+    "provider": "cursor",
+    "package": "",
+    "probe": [
+      "agent",
+      "--version"
+    ]
+  },
+  {
+    "id": "localstack_image",
+    "label": "LocalStack AWS image",
+    "provider": "image",
+    "package": "localstack/localstack",
+    "probe": [],
+    "requires": [
+      "docker"
+    ]
+  },
+  {
+    "id": "agent_lsp",
+    "label": "Agent LSP",
+    "provider": "npm",
+    "package": "@blackwell-systems/agent-lsp",
+    "probe": [
+      "agent-lsp",
+      "--version"
+    ],
+    "requires": [
+      "node",
+      "mise"
+    ]
+  },
+  {
+    "id": "typescript_lsp",
+    "label": "TypeScript language server",
+    "provider": "npm",
+    "package": "typescript-language-server",
+    "probe": [
+      "typescript-language-server",
+      "--version"
+    ],
+    "requires": [
+      "node",
+      "mise"
+    ]
+  },
+  {
+    "id": "typescript",
+    "label": "TypeScript",
+    "provider": "npm",
+    "package": "typescript",
+    "probe": [
+      "tsc",
+      "--version"
+    ],
+    "requires": [
+      "node",
+      "mise"
+    ]
+  },
+  {
+    "id": "pyright",
+    "label": "Pyright",
+    "provider": "npm",
+    "package": "pyright",
+    "probe": [
+      "pyright",
+      "--version"
+    ],
+    "requires": [
+      "node",
+      "mise"
+    ]
+  },
+  {
+    "id": "skill_seekers",
+    "label": "Skill Seekers",
+    "provider": "uv",
+    "package": "skill-seekers",
+    "probe": [
+      "skill-seekers",
+      "--version"
+    ],
+    "requires": [
+      "uv",
+      "mise"
+    ]
+  },
+  {
+    "id": "agnix",
+    "label": "Agent configuration lint",
+    "provider": "npm",
+    "package": "agnix",
+    "probe": [
+      "agnix",
+      "--version"
+    ],
+    "requires": [
+      "node",
+      "mise"
+    ]
+  },
+  {
+    "id": "crit",
+    "label": "Crit review CLI",
+    "provider": "formula",
+    "package": "crit",
+    "probe": [
+      "crit",
+      "--version"
+    ],
+    "requires": [
+      "homebrew"
+    ]
+  },
+  {
+    "id": "shell",
+    "label": "Global Zsh configuration",
+    "provider": "config",
+    "package": "",
+    "probe": []
+  },
+  {
+    "id": "git_config",
+    "label": "Global Git preferences",
+    "provider": "config",
+    "package": "",
+    "probe": []
+  },
+  {
+    "id": "integrations",
+    "label": "Global MCP integrations",
+    "provider": "config",
+    "package": "",
+    "probe": [],
+    "requires": [
+      "agent_lsp",
+      "typescript_lsp",
+      "typescript",
+      "pyright",
+      "skill_seekers"
+    ]
+  },
+  {
+    "id": "skills",
+    "label": "Developer skills and instructions",
+    "provider": "skills",
+    "package": "",
+    "probe": []
+  },
+  {
+    "id": "fonts",
+    "label": "SF Mono font registration",
+    "provider": "config",
+    "package": "",
+    "probe": []
+  },
+  {
+    "id": "orca_skills",
+    "label": "Orca bundled agent skills",
+    "provider": "orca_skills",
+    "package": "",
+    "probe": [],
+    "requires": [
+      "orca"
+    ]
+  }
+]
