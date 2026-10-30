@@ -11,9 +11,14 @@ def configure(home, managed):
         return path
     uv = executable('uv')
     lsp = executable('agent-lsp')
+    import subprocess
+    tool_root = pathlib.Path(subprocess.run([uv, 'tool', 'dir'], capture_output=True, text=True, check=True).stdout.strip())
+    interpreter = tool_root / 'skill-seekers' / ('Scripts/python.exe' if __import__('os').name == 'nt' else 'bin/python')
+    if not interpreter.is_file():
+        raise RuntimeError('Skill Seekers tool environment is missing; install it with uv tool install skill-seekers first.')
     servers = {
         'lsp': {'command': lsp, 'args': ['typescript:' + executable('typescript-language-server') + ',--stdio', 'python:' + executable('pyright-langserver') + ',--stdio']},
-        'skill-seekers': {'command': uv, 'args': ['tool', 'run', '--from', 'skill-seekers', 'python', '-m', 'skill_seekers.mcp.server_fastmcp']},
+        'skill-seekers': {'command': str(interpreter), 'args': ['-m', 'skill_seekers.mcp.server_fastmcp']},
     }
     for path in (home / '.claude.json', home / '.cursor/mcp.json'):
         managed.merge_json(path, {'mcpServers': servers})
