@@ -30,7 +30,7 @@ bash /tmp/developer-setup-bootstrap.sh --clone-only
 ## Included
 
 - Claude Code, Codex CLI, standalone Cursor CLI, VS Code, and Orca; no Cursor IDE.
-- Claude and Codex desktop apps, Google Chrome, Zoom, Slack, BetterDisplay, AppCleaner, Google Drive, Keka, and Shottr.
+- Claude and ChatGPT desktop apps, Google Chrome, Zoom, Slack, BetterDisplay, AppCleaner, Google Drive, Keka, and Shottr.
 - Docker Desktop and Compose, LocalStack CLI and AWS image, Postico 2, and Bruno.
 - Homebrew and mise; stable Node, Python, pnpm, uv, and Terraform.
 - Git/GitHub CLI, AWS CLI and Session Manager plugin, Azure CLI, PostgreSQL client.

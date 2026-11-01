@@ -301,12 +301,12 @@
     ]
   },
   {
-    "id": "codex_desktop",
-    "label": "Codex desktop app",
+    "id": "chatgpt",
+    "label": "ChatGPT desktop app",
     "provider": "cask",
-    "package": "codex-app",
+    "package": "chatgpt",
     "probe": [],
-    "app": "Codex.app",
+    "app": "ChatGPT.app",
     "requires": [
       "homebrew"
     ]
