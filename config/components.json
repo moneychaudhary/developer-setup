@@ -290,6 +290,28 @@
     ]
   },
   {
+    "id": "claude_desktop",
+    "label": "Claude desktop app",
+    "provider": "cask",
+    "package": "claude",
+    "probe": [],
+    "app": "Claude.app",
+    "requires": [
+      "homebrew"
+    ]
+  },
+  {
+    "id": "codex_desktop",
+    "label": "Codex desktop app",
+    "provider": "cask",
+    "package": "codex-app",
+    "probe": [],
+    "app": "Codex.app",
+    "requires": [
+      "homebrew"
+    ]
+  },
+  {
     "id": "vscode",
     "label": "Visual Studio Code",
     "provider": "cask",
@@ -313,6 +335,94 @@
       "--version"
     ],
     "app": "Orca.app",
+    "requires": [
+      "homebrew"
+    ]
+  },
+  {
+    "id": "chrome",
+    "label": "Google Chrome",
+    "provider": "cask",
+    "package": "google-chrome",
+    "probe": [],
+    "app": "Google Chrome.app",
+    "requires": [
+      "homebrew"
+    ]
+  },
+  {
+    "id": "zoom",
+    "label": "Zoom",
+    "provider": "cask",
+    "package": "zoom",
+    "probe": [],
+    "app": "zoom.us.app",
+    "requires": [
+      "homebrew"
+    ]
+  },
+  {
+    "id": "slack",
+    "label": "Slack",
+    "provider": "cask",
+    "package": "slack",
+    "probe": [],
+    "app": "Slack.app",
+    "requires": [
+      "homebrew"
+    ]
+  },
+  {
+    "id": "betterdisplay",
+    "label": "BetterDisplay",
+    "provider": "cask",
+    "package": "betterdisplay",
+    "probe": [],
+    "app": "BetterDisplay.app",
+    "requires": [
+      "homebrew"
+    ]
+  },
+  {
+    "id": "appcleaner",
+    "label": "AppCleaner",
+    "provider": "cask",
+    "package": "appcleaner",
+    "probe": [],
+    "app": "AppCleaner.app",
+    "requires": [
+      "homebrew"
+    ]
+  },
+  {
+    "id": "google_drive",
+    "label": "Google Drive",
+    "provider": "cask",
+    "package": "google-drive",
+    "probe": [],
+    "app": "Google Drive.app",
+    "requires": [
+      "homebrew"
+    ]
+  },
+  {
+    "id": "keka",
+    "label": "Keka",
+    "provider": "cask",
+    "package": "keka",
+    "probe": [],
+    "app": "Keka.app",
+    "requires": [
+      "homebrew"
+    ]
+  },
+  {
+    "id": "shottr",
+    "label": "Shottr",
+    "provider": "cask",
+    "package": "shottr",
+    "probe": [],
+    "app": "Shottr.app",
     "requires": [
       "homebrew"
     ]
