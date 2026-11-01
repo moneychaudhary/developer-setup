@@ -38,6 +38,7 @@ bash /tmp/developer-setup-bootstrap.sh --clone-only
 - Agent LSP, TypeScript/Python language servers, Skill Seekers, agnix, and Crit.
 - Captured global VS Code settings and extensions, SF Mono registration from macOS's own fonts, Orca global preferences and source-control prompts, selected Git defaults and Zsh mise activation.
 - Global MCP configuration and installation through the independent skills repository.
+- SignIn and SignOut workspace apps with Desktop shortcuts for the daily apps.
 
 The catalog is `config/components.json`. There are no project registrations, repository dependencies, per-project hooks, database connections, account sessions, or credentials in the portable configuration. The installer never deploys cloud resources.
 
@@ -73,6 +74,14 @@ Selected JSON settings merge with existing keys; VS Code JSONC is accepted and n
 Orca must be initialized once and closed before restoring preferences. Setup validates the known database schema and checksum, makes a private local database backup, and changes only the selected global preferences. Account and project fields are preserved. Unknown schemas are refused. Database backups are retained separately; `rollback` does not replace an Orca database automatically.
 
 Local checkpoint, ownership records, private backups, and per-run JSON reports live under `~/.local/state/developer-setup`. Every run prints a final status report and pending actions. Review captured files before publishing them; capture is deliberately an explicit local export.
+
+## Workspace
+
+```bash
+./setup install --only workspace
+```
+
+Installs SignIn and SignOut into `~/Applications/Workspace`, their scripts into `~/.local/share/workspace`, and Desktop shortcuts for installed apps; existing Desktop items are never replaced. SignIn starts Docker and LocalStack in the background, starts Stats and Granola without windows, opens Orca full screen, and builds three full-screen splits: Slack and Claude, VS Code and ChatGPT, Chrome and YouTube Music, each right-hand app at its minimum width. SignOut asks first, stops LocalStack, quits every app, and shuts down. Set `WORKSPACE_CHROME_PROFILE` when the work Chrome profile is not `Profile 1`. The first SignIn run asks for Accessibility and System Events permission; logs are in `~/Library/Logs/workspace-signin.log` and `workspace-signout.log`.
 
 ## Verification
 

@@ -1,0 +1,13 @@
+{
+  "ChatGPT": "/Applications/ChatGPT.app",
+  "Chrome": "/Applications/Google Chrome.app",
+  "Claude": "/Applications/Claude.app",
+  "Granola": "/Applications/Granola.app",
+  "Music": "~/Applications/Chrome Apps.localized/YouTube Music.app",
+  "Orca": "/Applications/Orca.app",
+  "Slack": "/Applications/Slack.app",
+  "VS Code": "/Applications/Visual Studio Code.app",
+  "Zoom": "/Applications/zoom.us.app",
+  "SignIn": "~/Applications/Workspace/SignIn.app",
+  "SignOut": "~/Applications/Workspace/SignOut.app"
+}

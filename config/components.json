@@ -640,6 +640,13 @@
     "probe": []
   },
   {
+    "id": "workspace",
+    "label": "SignIn and SignOut workspace with Desktop shortcuts",
+    "provider": "config",
+    "package": "",
+    "probe": []
+  },
+  {
     "id": "orca_skills",
     "label": "Orca bundled agent skills",
     "provider": "orca_skills",

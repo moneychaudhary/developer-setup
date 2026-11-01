@@ -103,6 +103,9 @@ def configure_component(name, home, managed, args):
     elif name == 'integrations':
         from .integrations import configure
         configure(home, managed)
+    elif name == 'workspace':
+        from . import workspace
+        return workspace.configure(home, managed)
     else:
         return None
     return 'Global configuration applied; unrelated keys retained.'
@@ -174,7 +177,7 @@ def run_install(args, selected, state, home):
                     state.data['steps'][name + '.install']['status'] = 'already-current' if before and before == after else 'updated' if before else 'installed'
                 state.data['steps'][name + '.install']['version'] = after
                 state.save()
-        if name in ('vscode', 'orca', 'shell', 'git_config', 'integrations', 'fonts'):
+        if name in ('vscode', 'orca', 'shell', 'git_config', 'integrations', 'fonts', 'workspace'):
             attempt(state, name + '.configure', lambda n=name: configure_component(n, home, managed, args), args, 'configured')
         if component['provider'] == 'cask' and name not in auth.COMMANDS:
             state.mark(name + '.login', 'not-required', detail='No account login required for local use.')
